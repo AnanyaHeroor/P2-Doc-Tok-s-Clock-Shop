@@ -1,5 +1,6 @@
 /** 
 * This class determines the angle of the hands of the clock
+* @author Ananya Heroor
 *
 */
 public class Clock{
