@@ -1,4 +1,7 @@
-//Ananya Heroor, 9074986762, heroor
+/*
+* This class helps ensure that Doc Tok isn't making mistakes in his financial transactions
+* @author Ananya Heroor
+*/
 public class Money{
     public static void main (String[] args){
 // computeEmployeePaycheck(10, 10.0, 4);
@@ -14,9 +17,21 @@ public class Money{
 // computeChangeFromSale(3,210,1000);
 
     }
+/** 
+* This function determines how much Doc Tok needs to actually pay his employees
+* @param int numHours: number of hours they should be paid for
+* @param double salary: amount to pay per hour (in dollars)
+* @param int tax: percentage of their salary that goes to tax
+* @return double equal to amount the employee should be paid based on the inputs
+*/
     public static double computeEmployeePaycheck (int numHours, double salary, int tax){
        return((numHours*salary)*(1-((double)tax/100)));
     }
+/** 
+* This function makes change for a given amount of money in as few coins as possible
+* @param int amount: amount of money to make change for (in cents)
+* @return int number of coins needed
+*/
     public static double computeChangeWithFewestCoins(int amount){
         int amountLeftToMakeChangeFor = amount;
         int numQuarters = amount/25;
@@ -34,6 +49,13 @@ public class Money{
         System.out.println("Pennies: "+(int)numPennies+"\n");
         return(totalCoins);
    }
+ /** 
+* This function uses the change-making function to compute how much change Doc Tok needs to give a customer
+* @param int numClocks: number of clocks sold
+* @param int clockPrice: price of each clock (in cents)
+* @param int amountPaid: amount of money the customer paid (in cents)
+* @return int number of coins needed
+*/
    public static int computeChangeFromSale (int numClocks, int clockPrice, int amountPaid){
        int difference = (((amountPaid)-(numClocks*clockPrice)));
        return((int)computeChangeWithFewestCoins(difference));
