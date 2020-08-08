@@ -1,5 +1,6 @@
 /**
 * This class paints the store red by figuring out how much paint to buy
+* @author Ananya Heroor
 *
 */
 public class Paint{
